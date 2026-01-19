@@ -181,7 +181,7 @@ alerting:
     - static_configs:
         - targets: ["localhost:9093"]
     - ec2_sd_configs:
-        - region: us-east-1
+        - region: ap-south-1
           port: 9093
           filters:
             - name: "tag:Name"
@@ -202,7 +202,7 @@ scrape_configs:
 
   - job_name: "ec2-node-exporters"
     ec2_sd_configs:
-      - region: us-east-1
+      - region: ap-south-1
         port: 9100
         filters:
           - name: "tag:Name"
